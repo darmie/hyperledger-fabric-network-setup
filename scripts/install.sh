@@ -22,7 +22,7 @@ fi
 
 rm -rf /usr/local/bin/$BINARY_NAME
 ln -s $INSTALL_DIR/scripts/$BINARY_NAME.py /usr/local/bin/$BINARY_NAME
-chmod a+x $INSTALL_DIR/scripts/$BINARY_NAME.py
+#chmod a+x $INSTALL_DIR/scripts/$BINARY_NAME.py
 sudo chmod a+x /usr/local/bin/$BINARY_NAME
 
 if ! command -v python > /dev/null 2>&1; then

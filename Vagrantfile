@@ -19,6 +19,7 @@ Vagrant.require_version '>= 2.0.0'
 
 INSTALL_DIR = File.expand_path(File.dirname(__FILE__))
 VERSION_FILE = "#{INSTALL_DIR}/.HLVersion".freeze
+AWS_CONFIG = "#{INSTALL_DIR}/configuration/aws.json".freeze
 
 def inc_version
   unless File.file?(VERSION_FILE)
@@ -39,7 +40,7 @@ end
 # Version tag to easily find instances in aws console
 VERSION = inc_version
 
-AWS_CFG = JSON.parse(File.read(ENV['AWS_CONFIG'])).freeze
+AWS_CFG = JSON.parse(File.read(AWS_CONFIG)).freeze
 
 # Set secret access key in your environment
 SECRET_ACCESS_KEY = ENV['AWS_SECRET_ACCESS_KEY'].freeze

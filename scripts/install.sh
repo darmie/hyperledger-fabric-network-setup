@@ -4,7 +4,7 @@ INSTALL_REPO=https://github.com/darmie/hyperledger-fabric-network-setup
 
 INSTALL_DIR=$HOME/.hyperledger-fabric-network-setup
 
-BINARY_NAME=jbfrabric
+BINARY_NAME=jbfabric
 
 if ! command -v git > /dev/null 2>&1; then
     echo """Git is not detected on this system. This script needs it as dependency."""
@@ -22,7 +22,8 @@ fi
 
 rm -rf /usr/local/bin/$BINARY_NAME
 ln -s $INSTALL_DIR/scripts/$BINARY_NAME.py /usr/local/bin/$BINARY_NAME
-chmod +x /usr/local/bin/$BINARY_NAME
+chmod a+x $INSTALL_DIR/scripts/$BINARY_NAME.py
+sudo chmod a+x /usr/local/bin/$BINARY_NAME
 
 if ! command -v python > /dev/null 2>&1; then
     echo """Python is not detected on this system. This script needs it as dependency.

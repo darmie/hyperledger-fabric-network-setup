@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-INSTALL_REPO=git@github.com:Kunstmaan/hyperledger-fabric-network-setup.git
+INSTALL_REPO=https://github.com/darmie/hyperledger-fabric-network-setup
 
 INSTALL_DIR=$HOME/.hyperledger-fabric-network-setup
 
-BINARY_NAME=kuma-hf-network
+BINARY_NAME=jbfrabric
 
 if ! command -v git > /dev/null 2>&1; then
     echo """Git is not detected on this system. This script needs it as dependency."""
@@ -62,4 +62,4 @@ Install link: https://docs.npmjs.com/getting-started/installing-node
 """
 fi
 
-echo "Done. Type kuma-hf-network -h for help."
+echo "Done. Type jbfabric -h for help."
